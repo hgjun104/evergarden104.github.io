@@ -1,9 +1,4 @@
-@charset "UTF-8";
-
-* {
-  outline: none;
-}
-
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Dosis:200,400,600);
 
 body, html {
   margin: 0;
@@ -45,6 +40,8 @@ h3 {
   box-shadow: 0 0 20px -3px #bbb;
   position: relative;
   display: flex;
+  margin-top: 50px;
+  box-shadow: 10px 10px 10px #bbb;
 }
 
 .resume::before {
@@ -623,4 +620,108 @@ margin-right: 30px;
   color: #fff;
   background-color: #0563bb;
 }
+}
+
+
+
+.wlc{
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+  background-color: #3d405b;
+  overflow: hidden;
+  position: fixed;
+  animation: wlc 3.2s ease-out forwards 1s;
+}
+
+
+h1 {
+  font-family: Dosis, sans-serif;
+  font-weight: 200;
+  position: absolute;
+  text-align: center;
+  display: block;
+  color: #fff;
+  top: 50%;
+  width: 100%;
+  margin-top: -55px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+  -webkit-animation: anim 3.2s ease-out forwards 1s;
+  animation: anim 3.2s ease-out forwards 1s;
+}
+
+strong {
+  display: block;
+  font-weight: 400;
+}
+
+@keyframes wlc{
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+@keyframes anim {
+  0% {
+    text-shadow: 0 0 50px #fff;
+    letter-spacing: 80px;
+    opacity: 0;
+    -moz-transform: rotateY(-90deg);
+  }
+  25% {
+    text-shadow: 0 0 1px #fff;
+    opacity: 0.8;
+    -moz-transform: rotateY(0deg);
+  }
+  50% {
+    text-shadow: 0 0 1px #fff;
+    opacity: 0.8;
+    -moz-transform: rotateY(0deg) translateZ(60px);
+  }
+  75% {
+    text-shadow: 0 0 1px #fff;
+    opacity: 0.8;
+    letter-spacing: 8px;
+    -moz-transform: rotateY(0deg) translateZ(100px);
+  }
+  100% {
+    text-shadow: 0 0 1px #fff;
+    opacity: 0;
+    letter-spacing: 8px;
+    -moz-transform: rotateY(0deg) translateZ(100px);
+    height: 0;
+  }
+}
+
+.title{
+  position: absolute;
+top: 0;
+  width: 55%;
+  height: 10%;
+  background-color: #4d6074;
+  z-index: 9998;
+  left: 22.5%;
+border: 2px solid white;
+box-shadow: 10px 10px 10px #bbb;
+}
+.title h2{
+  text-align: center;
+  color: white;
+  margin-top: 14px;
+  font-family: Dosis, sans-serif;
 }
